@@ -11,7 +11,7 @@ class MainActivity : FlutterActivity() {
             .registry
             .registerViewFactory(
                 "NativeMapView",
-                NativeMapView.Factory(flutterEngine.dartExecutor.binaryMessenger, lifecycle)
+                NativeMapView.Factory(lifecycle)
             )
      }
 }

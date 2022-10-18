@@ -69,13 +69,13 @@ class MapViewWrapper(
 }
 
 class NativeMapView(
-    context: Context, token: String, private val lifecycle: Lifecycle
+    context: Context, accessToken: String, private val lifecycle: Lifecycle
 ) : PlatformView {
     private var mapViewWrapper: MapViewWrapper?
 
     init {
         mapViewWrapper = MapViewWrapper(
-            context, token
+            context, accessToken
         )
         lifecycle.addObserver(mapViewWrapper!!)
     }
@@ -91,7 +91,7 @@ class NativeMapView(
         mapViewWrapper = null
     }
 
-    class Factory(private val messenger: BinaryMessenger, private val lifecycle: Lifecycle) :
+    class Factory(private val lifecycle: Lifecycle) :
         PlatformViewFactory(StandardMessageCodec.INSTANCE) {
         override fun create(context: Context?, viewId: Int, args: Any?): PlatformView {
             val accessToken = args as String
@@ -99,6 +99,3 @@ class NativeMapView(
         }
     }
 }
-
-
-

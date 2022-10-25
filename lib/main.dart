@@ -15,7 +15,9 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(accessToken: 'MAPBOX_DOWNLOADS_TOKEN'),
+      home: const MyHomePage(
+          accessToken:
+              'pk.eyJ1IjoibWFyY2luLWxlYW5jb2RlIiwiYSI6ImNsOW8yMmh6ajBjb3gzbm81bzZlNXUyaW4ifQ.JASgajUrZzcvdPXN0gIHQw'),
     );
   }
 }

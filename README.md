@@ -2,10 +2,10 @@
 
 Small example showing problem of MapBox integration with flutter platform views.
 
-## How to run
+<!-- ## How to run
 
 1. Add your mapbox access token to [gradle.properties](android/gradle.properties) (by replacing the value of `MAPBOX_DOWNLOADS_TOKEN`) and [main.dart](lib/main.dart) (by replacing the value of `accessToken`)
-2. Run on an android device
+2. Run on an android device -->
 
 ## Reproducing the problem
 
